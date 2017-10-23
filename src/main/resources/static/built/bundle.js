@@ -21938,6 +21938,7 @@
 	var Router = __webpack_require__(185).Router;
 	var Route = __webpack_require__(185).Route;
 	var IndexRoute = __webpack_require__(185).IndexRoute;
+	var browserHistory = __webpack_require__(185).browserHistory;
 	
 	var Main = __webpack_require__(248);
 	var Vehicle = __webpack_require__(249);
@@ -21947,11 +21948,11 @@
 	
 	module.exports = React.createElement(
 	    Router,
-	    null,
+	    { history: browserHistory },
 	    React.createElement(
 	        Route,
 	        { path: '/', component: Main },
-	        React.createElement(IndexRoute, { component: Vehicle }),
+	        React.createElement(IndexRoute, { component: Maintenance }),
 	        React.createElement(Route, { path: 'vehicle', component: Vehicle }),
 	        React.createElement(Route, { path: 'maintenance', component: Maintenance }),
 	        React.createElement(Route, { path: 'customer', component: Customer }),
@@ -27686,16 +27687,16 @@
 	                            )
 	                        )
 	                    )
-	                ),
-	                React.createElement('hr', null),
+	                )
+	            ),
+	            React.createElement('hr', null),
+	            React.createElement(
+	                'div',
+	                { className: 'row' },
 	                React.createElement(
 	                    'div',
-	                    { className: 'row' },
-	                    React.createElement(
-	                        'div',
-	                        { className: 'col-xs-15' },
-	                        this.props.children
-	                    )
+	                    { className: 'col-xs-15' },
+	                    this.props.children
 	                )
 	            )
 	        );
@@ -27708,10 +27709,6 @@
 
 	'use strict';
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -27722,7 +27719,6 @@
 	
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(37);
-	var Link = __webpack_require__(185).Link;
 	var when = __webpack_require__(250);
 	var client = __webpack_require__(270);
 	
@@ -27732,7 +27728,7 @@
 	
 	var root = '/api';
 	
-	var VehicleApp = function (_React$Component) {
+	module.exports = function (_React$Component) {
 	    _inherits(VehicleApp, _React$Component);
 	
 	    function VehicleApp(props) {
@@ -27979,8 +27975,6 @@
 	
 	    return VehicleApp;
 	}(React.Component);
-	
-	exports.default = VehicleApp;
 	
 	var CreateDialog = function (_React$Component2) {
 	    _inherits(CreateDialog, _React$Component2);
@@ -28268,17 +28262,17 @@
 	                            React.createElement(
 	                                'th',
 	                                null,
-	                                'First Name'
+	                                'Make'
 	                            ),
 	                            React.createElement(
 	                                'th',
 	                                null,
-	                                'Last Name'
+	                                'Model'
 	                            ),
 	                            React.createElement(
 	                                'th',
 	                                null,
-	                                'Description'
+	                                'Year'
 	                            ),
 	                            React.createElement(
 	                                'th',

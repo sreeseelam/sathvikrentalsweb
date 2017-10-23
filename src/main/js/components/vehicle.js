@@ -2,10 +2,8 @@
 
 const React = require('react');
 const ReactDOM = require('react-dom')
-var Link = require('react-router').Link;
 const when = require('when');
 const client = require('../client');
-
 
 const follow = require('../follow'); // function to hop multiple links by "rel"
 
@@ -13,8 +11,7 @@ const stompClient = require('../websocket-listener');
 
 const root = '/api';
 
-export default class VehicleApp extends React.Component {
-
+module.exports = class VehicleApp extends React.Component {
     constructor(props) {
         super(props);
         this.state = {vehicles: [], attributes: [], page: 1, pageSize: 2, links: {}};
@@ -406,9 +403,9 @@ class VehicleList extends React.Component {
         <table>
         <tbody>
         <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Description</th>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Year</th>
         <th>Manager</th>
         <th></th>
         <th></th>
@@ -456,4 +453,3 @@ class Vehicle extends React.Component {
     }
 }
 // end::vehicle[]
-

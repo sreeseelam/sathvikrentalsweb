@@ -21,11 +21,11 @@ module.exports = React.createClass({
                             </div>
                         </nav>
                     </div>
-                    <hr/>
-                    <div className="row">
-                        <div className="col-xs-15">
-                                {this.props.children}
-                        </div>
+                </div>
+                <hr/>
+                <div className="row">
+                    <div className="col-xs-15">
+                        {this.props.children}
                     </div>
                 </div>
             </div>
