@@ -44,7 +44,7 @@ public class DatabaseLoader implements CommandLineRunner {
 
 	@Override
 	public void run(String... strings) throws Exception {
-
+/*
 		Manager sreeni = this.managers.save(new Manager("sreeni", "admin",
 				"ROLE_MANAGER"));
 		Manager greg = this.managers.save(new Manager("greg", "turnquist",
@@ -82,6 +82,7 @@ public class DatabaseLoader implements CommandLineRunner {
 		this.persons.save(new Person("Peregrin", "Took", "pipe smoker", oliver));
 
 		SecurityContextHolder.clearContext();
+		*/
 	}
 }
 // end::code[]

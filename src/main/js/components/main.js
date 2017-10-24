@@ -7,15 +7,15 @@ module.exports = React.createClass({
         return (
             <div className="container">
                 <div className="row">
-                    <div className="col-xs-15">
+                    <div className="col-xs-10 col-xs-offset-1">
                         <nav className="navbar navbar-default">
                             <div className="container">
                                 <div className="navbar-header">
                                     <ul className="nav navbar-nav">
-                                        <li><Link to="/vehicle">Vehicle</Link></li>
-                                        <li><Link to="/maintenance">Maintenance</Link></li>
-                                        <li><Link to="/person">Person</Link></li>
-                                        <li><Link to="/about">About</Link></li>
+                                        <li><Link to="/vehicle" activeStyle={{color: "red"}}>Vehicle</Link></li>
+                                        <li><Link to="/maintenance" activeClassName={"active"}>Maintenance</Link></li>
+                                        <li><Link to="/person" activeClassName={"active"}>Person</Link></li>
+                                        <li><Link to="/about" activeClassName={"active"}>About</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -24,7 +24,7 @@ module.exports = React.createClass({
                 </div>
                 <hr/>
                 <div className="row">
-                    <div className="col-xs-15">
+                    <div className="col-xs-10 col-xs-offset-1">
                         {this.props.children}
                     </div>
                 </div>

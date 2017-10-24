@@ -27634,7 +27634,7 @@
 	                { className: 'row' },
 	                React.createElement(
 	                    'div',
-	                    { className: 'col-xs-15' },
+	                    { className: 'col-xs-10 col-xs-offset-1' },
 	                    React.createElement(
 	                        'nav',
 	                        { className: 'navbar navbar-default' },
@@ -27652,7 +27652,7 @@
 	                                        null,
 	                                        React.createElement(
 	                                            Link,
-	                                            { to: '/vehicle' },
+	                                            { to: '/vehicle', activeStyle: { color: "red" } },
 	                                            'Vehicle'
 	                                        )
 	                                    ),
@@ -27661,7 +27661,7 @@
 	                                        null,
 	                                        React.createElement(
 	                                            Link,
-	                                            { to: '/maintenance' },
+	                                            { to: '/maintenance', activeClassName: "active" },
 	                                            'Maintenance'
 	                                        )
 	                                    ),
@@ -27670,7 +27670,7 @@
 	                                        null,
 	                                        React.createElement(
 	                                            Link,
-	                                            { to: '/person' },
+	                                            { to: '/person', activeClassName: "active" },
 	                                            'Person'
 	                                        )
 	                                    ),
@@ -27679,7 +27679,7 @@
 	                                        null,
 	                                        React.createElement(
 	                                            Link,
-	                                            { to: '/about' },
+	                                            { to: '/about', activeClassName: "active" },
 	                                            'About'
 	                                        )
 	                                    )
@@ -27695,7 +27695,7 @@
 	                { className: 'row' },
 	                React.createElement(
 	                    'div',
-	                    { className: 'col-xs-15' },
+	                    { className: 'col-xs-10 col-xs-offset-1' },
 	                    this.props.children
 	                )
 	            )
@@ -27736,7 +27736,7 @@
 	
 	        var _this = _possibleConstructorReturn(this, (VehicleApp.__proto__ || Object.getPrototypeOf(VehicleApp)).call(this, props));
 	
-	        _this.state = { vehicles: [], attributes: [], page: 1, pageSize: 2, links: {} };
+	        _this.state = { vehicles: [], attributes: [], page: 1, pageSize: 10, links: {} };
 	        _this.updatePageSize = _this.updatePageSize.bind(_this);
 	        _this.onCreate = _this.onCreate.bind(_this);
 	        _this.onUpdate = _this.onUpdate.bind(_this);
