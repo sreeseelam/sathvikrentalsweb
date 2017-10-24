@@ -48,9 +48,9 @@ public class DatabaseLoader implements CommandLineRunner {
 		Manager sreeni = this.managers.save(new Manager("sreeni", "admin",
 				"ROLE_MANAGER"));
 		Manager greg = this.managers.save(new Manager("greg", "turnquist",
-							"ROLE_MANAGER"));
+				"ROLE_MANAGER"));
 		Manager oliver = this.managers.save(new Manager("oliver", "gierke",
-							"ROLE_MANAGER"));
+				"ROLE_MANAGER"));
 
 		SecurityContextHolder.getContext().setAuthentication(
 				new UsernamePasswordAuthenticationToken("sreeni", "doesn't matter",
@@ -66,16 +66,16 @@ public class DatabaseLoader implements CommandLineRunner {
 		this.vehicles.save(new Vehicle("Benz", "Car", "2018", sreeni));
 
 		SecurityContextHolder.getContext().setAuthentication(
-			new UsernamePasswordAuthenticationToken("greg", "doesn't matter",
-				AuthorityUtils.createAuthorityList("ROLE_MANAGER")));
+				new UsernamePasswordAuthenticationToken("greg", "doesn't matter",
+						AuthorityUtils.createAuthorityList("ROLE_MANAGER")));
 
 		this.persons.save(new Person("Frodo", "Baggins", "ring bearer", greg));
 		this.persons.save(new Person("Bilbo", "Baggins", "burglar", greg));
 		this.persons.save(new Person("Gandalf", "the Grey", "wizard", greg));
 
 		SecurityContextHolder.getContext().setAuthentication(
-			new UsernamePasswordAuthenticationToken("oliver", "doesn't matter",
-				AuthorityUtils.createAuthorityList("ROLE_MANAGER")));
+				new UsernamePasswordAuthenticationToken("oliver", "doesn't matter",
+						AuthorityUtils.createAuthorityList("ROLE_MANAGER")));
 
 		this.persons.save(new Person("Samwise", "Gamgee", "gardener", oliver));
 		this.persons.save(new Person("Merry", "Brandybuck", "pony rider", oliver));
