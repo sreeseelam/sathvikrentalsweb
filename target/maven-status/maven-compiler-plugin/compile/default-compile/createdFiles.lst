@@ -1,3 +1,4 @@
+com/sathviksystems/rental/VehicleDataRestEventHandler.class
 com/sathviksystems/rental/DatabaseLoader.class
 com/sathviksystems/rental/Vehicle.class
 com/sathviksystems/rental/Person.class
@@ -12,3 +13,4 @@ com/sathviksystems/rental/VehicleRepository.class
 com/sathviksystems/rental/EventHandler.class
 com/sathviksystems/rental/Manager.class
 com/sathviksystems/rental/WebSocketConfiguration.class
+com/sathviksystems/rental/VehicleEventHandler.class

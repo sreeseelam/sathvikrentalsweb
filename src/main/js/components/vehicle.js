@@ -292,6 +292,7 @@ class UpdateDialog extends React.Component {
         this.props.attributes.forEach(attribute => {
             updatedVehicle[attribute] = ReactDOM.findDOMNode(this.refs[attribute]).value.trim();
         });
+        updatedVehicle['manager'] = this.props.vehicle.entity.manager;
         this.props.onUpdate(this.props.vehicle, updatedVehicle);
         window.location = "#";
     }
@@ -440,6 +441,7 @@ class Vehicle extends React.Component {
         <td>{this.props.vehicle.entity.model}</td>
         <td>{this.props.vehicle.entity.year}</td>
         <td>{this.props.vehicle.entity.manager.name}</td>
+        <td>{this.props.vehicle.entity.manager?<div>{this.props.vehicle.entity.manager.name}</div>:<div>NA</div>}</td>
         <td>
         <UpdateDialog vehicle={this.props.vehicle}
         attributes={this.props.attributes}

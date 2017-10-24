@@ -7,16 +7,16 @@ var browserHistory = require('react-router').browserHistory;
 var Main = require('./components/main');
 var Vehicle = require('./components/vehicle');
 var Maintenance = require('./components/maintenance');
-var Customer = require('./components/customer');
+var Person = require('./components/person');
 var About = require('./components/about');
 
 module.exports = (
     <Router history={browserHistory}>
         <Route path="/" component={Main}>
-            <IndexRoute component={Maintenance} />
+            <IndexRoute component={Vehicle} />
             <Route path="vehicle" component={Vehicle} />
             <Route path="maintenance" component={Maintenance} />
-            <Route path="customer" component={Customer} />
+            <Route path="person" component={Person} />
             <Route path="about" component={About} />
         </Route>
     </Router>
